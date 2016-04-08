@@ -96,12 +96,12 @@ sleep 1;
 # ################
 # #SSH To Live Server (Rsync?)
 echo "SSH-ing with rsync to live server";
-sh ~/deploy/rsyncbuild.sh;
+sh ~/newdeploy/rsyncbuild.sh;
 sleep 1;
 
 # ################
 #Run export command on live server (Via SSH)
 echo "Running export via ssh on live server";
-sh ~/deploy/executedeploy.sh;
+sh ~/newdeploy/executedeploy.sh;
 sleep 1;
 echo "OK! ALL DONE !";
