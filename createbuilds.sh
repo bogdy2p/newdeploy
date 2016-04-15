@@ -12,6 +12,8 @@ MagentoDeployScriptsGit="https://github.com/AOEpeople/magento-deployscripts.git"
 ArtifactsFolder="artifacts";
 ApplyPhpPathInVendor="vendor/aoepeople/envsettingstool/apply.php";
 InstallSHPathInVendor="vendor/aoepeople/magento-deployscripts/install.sh";
+BenabeeFilePathFrom=$ApacheFolder/$AmoranaFolder/"scripts/benabeebridge_lukas_bluebox_PRY0k4IaDNKF13nCldkM42cV0yj2ce.php";
+BenabeeFilePathTo=$ApacheFolder/$AmoranaFolder/$ArtifactsFolder/build1/"htdocs/benabeebridge_lukas_bluebox_PRY0k4IaDNKF13nCldkM42cV0yj2ce.php";
 
 # ##############
 #Cd into apache folder
@@ -69,6 +71,12 @@ ApplyPhpFrom1=$ApacheFolder/$BuildAndDeployFolder/patched-files/apply.php;
 ApplyPhpTo1=$ApacheFolder/$AmoranaFolder/$ArtifactsFolder/build1/$ApplyPhpPathInVendor;
 cp $ApplyPhpFrom1 $ApplyPhpTo1;
 echo "Copied Apply.php (Overwritten)";
+
+# #################
+# #################
+
+cp $BenabeeFilePathFrom $BenabeeFilePathTo;
+echo "Copied Benabee File into htdocs. --  "$BenabeeFilePathFrom" -- "$BenabeeFilePathTo;
 
 # ################
 # #Re-add to archives. (Maybe only first archive.)
